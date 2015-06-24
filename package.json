@@ -1,0 +1,19 @@
+{
+  "name": "twbs_template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./app/index.html",
+  "window": {
+    "width": 1100,
+    "height": 580,
+    "center": true,
+    "toolbar": true
+  },
+  "chromium-args": "--lang=th_TH --enable-geolocation --child-clean-exit",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
