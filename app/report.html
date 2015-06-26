@@ -18,10 +18,10 @@
     <script src="../vendor/jquery/dist/jquery.min.js"></script>
     <script src="../vendor/materialjs/bootstrap.min.js"></script>
     <script src="./js/conn.js"></script>
-    <script src="./js/index.js"></script>
+    <script src="./js/report.js"></script>
     <script src="../vendor/materialjs/material.min.js"></script>
     <script src="../vendor/materialjs/ripples.min.js"></script>
-    <script src="../vendor/paging/jquery.paging.min.js"></script>
+    <script src="../vendor/highcharts/highcharts.js"></script>
 </head>
 <body>
 
@@ -73,87 +73,36 @@
     </nav>
 
     <div class="container">
-        <br /><br />
-        <h1>Hello world</h1>
-        <button data-name="btnHello2" class="btn btn-success" id="btnHello">Click Me!</button>
-        <button id="btnShow" class="btn btn-warning" id="btnWarning">Click Me!</button>
 
-        <table id="tblShow" class="table table-responsive table-bordered">
-            <thead>
-                <tr class="bg-info">
-                    <th>ลำดับที่</th>
-                    <th>รายการอาหาร</th>
-                    <th>ลบรายการ</th>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-            <tfoot>
-                <tr class="bg-info">
-                    <td colspan="3"></td>
-                </tr>
-            </tfoot>
-        </table>
-
-        <button class="btn btn-primary" id="btnNetwork">Show Network</button>
-        <p id="myNetwork" class="bg-success"></p>
+        <div class="row well well-sm">
+            <div class="col-md-3">
+                <label for="txtStartDate">
+                    วันที่เริ่มต้น
+                </label>
+                <input id="txtStartDate" type="date" class="material-input form-control">
+            </div>
+            <div class="col-md-3">
+                <label for="txtEndDate">วันที่สิ้นสุด</label>
+                <input id="txtEndDate" type="date" class="material-input form-control">
+            </div>
+            <div class="col-md-2">
+                <button id="btnShow" type="button" class="btn btn-success btn-fab-success">
+                    <span class="fa fa-search"></span>ค้นหา</button>
+            </div>
+        </div>
 
         <div class="row">
             <div class="col-md-6">
-                <label for="txtHost">Host : </label>
-                <input id="txtHost" class="material-input" type="text">
-                <label for="txtDb">Database : </label>
-                <input id="txtDb" class="material-input" type="text">
+                <div id="chart1" style="height: 300px;">
+
+                </div>
             </div>
             <div class="col-md-6">
-                <label for="txtUser">User Name : </label>
-                <input id="txtUser" class="material-input" type="text" style="width: 100px;">
-                <label for="txtPass">Password : </label>
-                <input id="txtPass" class="material-input" type="text" style="width: 100px;">
+                <div id="chart2" style="height: 300px;">
+
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12">
-                <button id="btnGetConfig" class="btn btn-success btn-fab-success">อ่านค่าการเชื่อมต่อ</button>
-                <button id="btnSaveConfig" class="btn btn-success btn-fab-success">บันทึกการเชื่อมต่อ</button>
-                <button id="btnTestConfig" class="btn btn-success btn-fab-success">ทดสอบการเชื่อมต่อ</button>
-            </div>
-        </div>
-
-        <br />
-        <label for="txtFname">ชื่อ : </label>
-        <input id="txtFname" class="material-input" type="text"/>
-
-        <label for="txtLname">นามสกุล : </label>
-        <input id="txtLname" class="material-input" type="text">
-        <button id="btnSayHi" type="button" class="btn btn-material-pink">Say Hi!!</button>
-
-        <div class="container">
-            <button id="btnReport" type="button" class="btn btn-material-lightblue">Report</button>
-            <table id="tblList" class="table table-bordered table-responsive table-striped">
-                <thead>
-                <tr class="bg-success">
-                    <th>ลำดับที่</th>
-                    <th>HN</th>
-                    <th>ชื่อ-สกุล</th>
-                    <th>เพศ</th>
-                    <th>สิทธิการรักษา</th>
-                    <th>สถานะแต่งงาน</th>
-                </tr>
-                </thead>
-                <tbody>
-
-                </tbody>
-                <tfoot>
-                <tr>
-                    <td colspan="6" class="bg-success"></td>
-                </tr>
-                </tfoot>
-            </table>
-        </div>
-        <ul class="pagination"></ul>
-
 
     </div>
 

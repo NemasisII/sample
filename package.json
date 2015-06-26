@@ -1,13 +1,13 @@
 {
-  "name": "twbs_template",
+  "name": "sample",
   "version": "1.0.0",
   "description": "",
   "main": "./app/index.html",
   "window": {
-    "width": 1100,
-    "height": 580,
+    "width": 1000,
+    "height": 650,
     "center": true,
-    "toolbar": true
+    "toolbar": false
   },
   "chromium-args": "--lang=th_TH --enable-geolocation --child-clean-exit",
   "scripts": {
@@ -15,5 +15,9 @@
   },
   "keywords": [],
   "author": "",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "knex": "^0.8.6",
+    "mysql": "^2.7.0"
+  }
 }
